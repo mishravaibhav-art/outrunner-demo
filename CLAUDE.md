@@ -8,6 +8,12 @@ A small React + Vite frontend used to test chat-driven UI changes (Outrunner / C
 - `npm run dev` – start the dev server at http://localhost:5173/outrunner-demo/
 - `npm run build` – production build into `dist/` (must pass before opening a PR)
 
+## Environment
+
+- Copy `.env.example` to `.env`. `npm run build` fails if `VITE_API_URL` is missing (checked by `scripts/check-env.js`).
+- `VITE_*` values are baked into the browser bundle; never put secrets in them. `DEMO_SECRET` is server-only.
+- Never print or commit secret values.
+
 ## Structure
 
 - `src/App.jsx` – page layout (dashboard, workflows table, pricing)
