@@ -9,6 +9,7 @@ export default function PricingCards() {
     <div className="pricing-grid">
       {plans.map((plan) => (
         <div key={plan.name} className={plan.featured ? 'card pricing-card featured' : 'card pricing-card'}>
+          {plan.featured && <div className="popular-badge">Most popular</div>}
           <h3 className="plan-name">{plan.name}</h3>
           <p className="plan-price">
             {plan.price}
